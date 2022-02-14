@@ -2,11 +2,12 @@ class ProjectsController < ApplicationController
   before_action :set_project, only: [:show]
 
   def index
-    Project.where(enabled: true)
+    @projects = Project.where(enabled: true)
+    render json: @projects, status: :ok
   end
 
   def show
-    @project
+    render json: @project, status: :ok
   end
 
   private
