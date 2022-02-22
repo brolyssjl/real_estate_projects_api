@@ -14,6 +14,6 @@ RSpec.describe Project, type: :model do
   it { should validate_presence_of(:sales_room_email) }
   it { should validate_presence_of(:estimated_start_date) }
   it { should validate_presence_of(:estimated_end_date) }
-  it { should allow_value("").for(:logo) } 
+  it { should allow_value('').for(:logo) }
   it { should validate_numericality_of(:stratum).only_integer }
 end
